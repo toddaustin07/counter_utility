@@ -24,7 +24,7 @@ The device is meant for building automations where tracking a duration of time o
 
 The duration of the switch can be tracked in any unit from seconds to weeks
 
-The counter can also be tied to the switch such that is counts the number of times the switch is changed.
+The counter can also be tied to the switch such that it counts the number of times the switch is changed.
 
 ### Device Settings
 
