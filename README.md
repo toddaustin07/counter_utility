@@ -35,7 +35,7 @@ Here is where you chose what 'unit' of measure you want to use: seconds, minutes
 How often the duration value is updated *for display and automations* is determined by this setting.  The frequency is provided in number of seconds, with a minimum of 10 and a maximum of 86400 (one day).  Note that duration is always continually tracked down to the second within the driver.  But because it would cause rate limit issues to try and update SmartThings cloud every second, this option merely determines the frequency of actual *displayed* values in the mobile app, and currency of values *available to automations*.
 
 ##### Switch Off Action
-When the switch is turned OFF, it can either temporarily pause the duration tracking until the switch is turned ON again, or it can completely reset the duration tracking to 0.  Use this Setting to determine which mode you need.
+When the switch is turned OFF, it can either temporarily pause the duration tracking until the switch is turned ON again, or it can completely reset the duration tracking to 0 and stop tracking duration.  Use this Setting to determine which mode you need.
 
 ##### Switch / Counter Linkage
 Normally the duration tracking of the switch, and the counter using the add and subtract buttons, are two separate and independent functions.  However if you want to not only track the duration that the switch is ON, but also how many times the switch is used, this Settings option allows you to make that linkage.  There are multiple choices: (1) count only when switch is turned ON, (2) count only when switch is turned OFF, (3) count either switch state change, or (4) don't count switch changes at all (no link).
