@@ -1,0 +1,5 @@
+name: 'Edge Counter Utility V1'
+packageKey: 'edgeUtil_V1'
+permissions:
+    lan: {}
+    discovery: {}

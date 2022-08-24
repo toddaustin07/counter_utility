@@ -1,0 +1,42 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [
+            {
+                "displayType": "pushButton",
+                "pushButton": {
+                    "command": "push"
+                }
+            }
+        ]
+    },
+    "detailView": [
+        {
+            "label": "Add",
+            "displayType": "pushButton",
+            "pushButton": {
+                "command": "push"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [],
+        "actions": [
+            {
+                "label": "Add",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "push",
+                            "value": "push",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "partyvoice23922.add2",
+    "version": 1
+}

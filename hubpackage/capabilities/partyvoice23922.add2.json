@@ -1,0 +1,14 @@
+{
+    "id": "partyvoice23922.add2",
+    "version": 1,
+    "status": "proposed",
+    "name": "add2",
+    "ephemeral": false,
+    "attributes": {},
+    "commands": {
+        "push": {
+            "name": "push",
+            "arguments": []
+        }
+    }
+}

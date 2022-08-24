@@ -1,0 +1,36 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{duration.value}} {{duration.unit}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Duration",
+            "displayType": "state",
+            "state": {
+                "label": "{{duration.value}}",
+                "unit": "duration.unit"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Duration",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "duration.value",
+                    "valueType": "integer",
+                    "unit": "duration.unit"
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "partyvoice23922.duration2",
+    "version": 1
+}

@@ -1,0 +1,10 @@
+id: partyvoice23922.resetalt
+version: 1
+status: proposed
+name: resetalt
+ephemeral: false
+attributes: {}
+commands:
+  push:
+    name: push
+    arguments: []

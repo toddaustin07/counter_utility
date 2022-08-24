@@ -1,0 +1,17 @@
+id: partyvoice23922.count
+version: 1
+status: proposed
+name: count
+ephemeral: false
+attributes:
+  count:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

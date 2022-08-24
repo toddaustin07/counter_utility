@@ -1,0 +1,28 @@
+id: partyvoice23922.duration2
+version: 1
+status: proposed
+name: duration2
+ephemeral: false
+attributes:
+  duration:
+    schema:
+      type: object
+      properties:
+        value:
+          type: integer
+        unit:
+          type: string
+          enum:
+            - seconds
+            - minutes
+            - hours
+            - days
+            - weeks
+            - months
+            - years
+          default: hours
+      additionalProperties: false
+      required:
+        - value
+    enumCommands: []
+commands: {}

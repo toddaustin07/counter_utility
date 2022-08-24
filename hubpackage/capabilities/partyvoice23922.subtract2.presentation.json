@@ -1,0 +1,42 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": [
+            {
+                "displayType": "pushButton",
+                "pushButton": {
+                    "command": "push"
+                }
+            }
+        ]
+    },
+    "detailView": [
+        {
+            "label": "Subtract",
+            "displayType": "pushButton",
+            "pushButton": {
+                "command": "push"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [],
+        "actions": [
+            {
+                "label": "Subtract",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "push",
+                            "value": "push",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "partyvoice23922.subtract2",
+    "version": 1
+}

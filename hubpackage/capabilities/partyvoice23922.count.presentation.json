@@ -1,0 +1,34 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{count.value}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Counter",
+            "displayType": "state",
+            "state": {
+                "label": "{{count.value}}"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "Counter",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "count.value",
+                    "valueType": "integer"
+                }
+            }
+        ],
+        "actions": []
+    },
+    "id": "partyvoice23922.count",
+    "version": 1
+}

@@ -1,0 +1,35 @@
+{
+    "dashboard": {
+        "states": [],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Reset",
+            "displayType": "pushButton",
+            "pushButton": {
+                "command": "push"
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [],
+        "actions": [
+            {
+                "label": "Reset",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "push",
+                            "value": "push",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "partyvoice23922.resetalt",
+    "version": 1
+}

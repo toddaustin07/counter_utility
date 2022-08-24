@@ -1,0 +1,10 @@
+id: partyvoice23922.subtract2
+version: 1
+status: proposed
+name: subtract2
+ephemeral: false
+attributes: {}
+commands:
+  push:
+    name: push
+    arguments: []

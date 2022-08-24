@@ -1,0 +1,100 @@
+name: edgeutil_count.v1
+components:
+  - id: main
+    capabilities:
+      - id: switch
+        version: 1
+      - id: contactSensor
+        version: 1
+      - id: partyvoice23922.duration2
+        version: 1
+      - id: partyvoice23922.resetalt
+        version: 1
+      - id: partyvoice23922.createanother
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: Switch
+  - id: counter
+    capabilities:
+      - id: partyvoice23922.add2
+        version: 1
+      - id: partyvoice23922.subtract2
+        version: 1
+      - id: partyvoice23922.count
+        version: 1
+      - id: partyvoice23922.resetalt
+        version: 1
+      - id: refresh
+        version: 1
+metadata:
+  vid: 08575802-af46-3001-bdae-77db5cba3de4
+  mnmn: SmartThingsCommunity
+  ocfDeviceType: oic.d.switch
+preferences:
+  - title: "Duration Resolution"
+    name: scale
+    description: "Select an unit"
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        seconds: "Seconds"
+        minutes: "Minutes"
+        hours: "Hours"
+        days: "Days"
+        weeks: "Weeks"
+      default: hours
+  - title: "Duration Auto-Update Frequency"
+    name: frequency
+    description: "Every n number of seconds"
+    required: true
+    preferenceType: integer
+    definition:
+      minimum: 10
+      maximum: 86400
+      default: 1800
+  - title: "Switch Off Action"
+    name: switchoff
+    description: "Choose an option"
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        pause: "Pause duration tracking"
+        reset: "Reset duration tracking"
+      default: pause
+  - title: "Switch / Counter Linkage"
+    name: countlink
+    description: "Choose an option"
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        nolink: "Not linked"
+        counton: "Count Switch On's"
+        countoff: "Count Switch Off's"
+        countany: "Count all Switch changes"
+      default: nolink
+  - title: "Contact sensor Behavior"
+    name: behavior
+    description: "Choose an option"
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        on_open: "On = Open"
+        on_closed: "On = Closed"
+        disable: "Disabled"
+      default: on_open
+  - title: "Dashboard State & Control"
+    name: dashboard
+    description: "Select preference"
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        duration: "Duration"
+        count: "Count"
+      default: count
