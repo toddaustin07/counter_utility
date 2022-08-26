@@ -54,7 +54,7 @@ The screen has 2 sections ('components')
 
 #### Main
 * Switch
-* Duration value field (an integer value, with configured unit string)
+* Duration value field (an integer value, with configured unit string); you can force an immediate update to this field by swiping down on the screen, otherwise it is updated based on the frequency configured in device Settings
 * Reset button:  resets the duration value to 0.  If the switch is ON, duration tracking will continue
 * Create additional device button
 
