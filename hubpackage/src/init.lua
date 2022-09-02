@@ -30,7 +30,7 @@ local log = require "log"
 thisDriver = {}
 local initialized = false
 
-local DURATION_PROFILE = 'edgeutil.v1'
+local DURATION_PROFILE = 'edgeutil.v1b'
 local COUNT_PROFILE = 'edgeutil_count.v1'
 
 -- Custom Capabilities
@@ -191,6 +191,8 @@ local function handle_switch(driver, device, command)
 
   device:emit_event(capabilities.contactSensor.contact(contactset[command.command]))                
   
+  -- Don't do anything else if a duplicate
+  if device:get_field('lastcmd') == command.command then; return; end
   
   -- Manage duration tracking
   
@@ -198,6 +200,7 @@ local function handle_switch(driver, device, command)
   local basetime = device:get_field('baseTime')
   log.debug ('SW basetime=', basetime)
   log.debug ('SW pausetime=', device:get_field('pauseTime'))
+  
   if command.command == 'on' then
 
     if basetime == nil then
@@ -235,6 +238,7 @@ local function handle_switch(driver, device, command)
   end
   
   _update_duration(device, duration)
+  device:set_field('lastcmd', command.command)
 
 end 
 
@@ -293,7 +297,9 @@ local function handle_stockrefresh(driver, device, command)
 
   log.info ('Stock refresh requested; command:', command.command)
 
-  refresh_all(device)
+  if device:get_latest_state('main', capabilities.switch.ID, capabilities.switch.switch.NAME) == 'on' then
+    refresh_all(device)
+  end
   
 end
 
@@ -309,7 +315,10 @@ local function device_init(driver, device)
 
   _update_duration(device, calc_duration(device))
   
-  if device:get_latest_state('main', capabilities.switch.ID, capabilities.switch.switch.NAME) == 'on' then
+  local currswitchstate = device:get_latest_state('main', capabilities.switch.ID, capabilities.switch.switch.NAME)
+  device:set_field('lastcmd', currswitchstate)
+  
+  if currswitchstate == 'on' then
     start_auto_refresh(device)
   end
 
@@ -329,6 +338,7 @@ local function device_added (driver, device)
   _update_count(device, 0)
   device:set_field('pauseTime', 0, {persist = true})
   device:set_field('baseTime', nil, {persist = true})
+  device:set_field('lastcmd', 'off')
 
 end
 

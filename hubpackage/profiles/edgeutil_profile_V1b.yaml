@@ -1,4 +1,4 @@
-name: edgeutil_count.v1
+name: edgeutil.v1b
 components:
   - id: main
     capabilities:
@@ -29,7 +29,7 @@ components:
       - id: refresh
         version: 1
 metadata:
-  vid: 08575802-af46-3001-bdae-77db5cba3de4
+  vid: 54d82fcb-4006-3886-9e6b-ce469bed2ce2
   mnmn: SmartThingsCommunity
   ocfDeviceType: oic.wk.d
 preferences:
@@ -97,4 +97,4 @@ preferences:
       options:
         duration: "Duration"
         count: "Count"
-      default: count
+      default: duration
