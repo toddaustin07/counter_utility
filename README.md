@@ -1,18 +1,15 @@
-# counter_utility
+# SmartThings Edge Driver for Duration and Count
 Utility Edge device driver for timer and counter functions
 
-Currently available from my [test channel](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL)
+Now available from my [shared projects channel](https://bestow-regional.api.smartthings.com/invite/d429RZv8m9lo).
 
 Once installed to your hub, using the mobile app, perform an *Add device / Scan for nearby devices* action and a new device labled "Counter Utility" will be created and placed in your 'No room assigned' room.
 
-### Caveats
-This driver is still in early implementation, so may have some hiccups, or may evolve based on community feedback.
-
 #### Known Issues
 Due to SmartThings platform issues the following might be observed:
-* dashboard duration units may not show correct string (seconds, minutes, etc.)
-* dashboard tile seems unnecessarily large (not an issue per se)
-* labels on the Controls screen may not be displaying properly
+* dashboard duration units may be slow to change after changing the Duration Resolution in device Settings
+* labels on the Controls screen may not be displaying properly (especially for iOS users)
+* dashboard icon is always color highlighted and does not change with switch is turned OFF
 
 
 ### Device Functions
@@ -65,7 +62,10 @@ The screen has 2 sections ('components')
 * Reset button: resets the count value to 0
 
 ### Automations
+
 #### Available as IF conditions
 * switch, duration value, count
 #### Available as THEN actions
-* switch, reset duration, reset count, add-to count, subtract-from count
+* switch, reset duration, reset count, add-to count (increment), subtract-from count (decrement)
+#### Notes
+* Be aware that duplicate switch ON commands received from automations will be ignored
