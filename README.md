@@ -56,8 +56,8 @@ The screen has 2 sections ('components')
 * Create additional device button
 
 #### Counter
-* Add button to increment counter
-* Subtract button to decrement counter
+* Button to increment counter
+* Button to decrement counter
 * Count value field
 * Reset to a specified number
 
