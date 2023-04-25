@@ -59,13 +59,29 @@ The screen has 2 sections ('components')
 * Add button to increment counter
 * Subtract button to decrement counter
 * Count value field
-* Reset button: resets the count value to 0
+* Reset to a specified number
 
 ### Automations
 
 #### Available as IF conditions
 * switch, duration value, count
 #### Available as THEN actions
-* switch, reset duration, reset count, add-to count (increment), subtract-from count (decrement)
+* switch, reset duration, reset count, add-to count (increment), subtract-from count (decrement), reset to specified number (counter only)
+
+Here is an example commands section for a Rule that resets the counter to a specific number:
+```
+"commands": [
+  {
+    "component": "counter",
+    "capability": "partyvoice23922.resetnum",
+    "command": "resetValue",
+    "arguments": [
+      {
+        "integer": 12 
+      }
+    ]
+  }
+]
+```
 #### Notes
 * Be aware that duplicate switch ON commands received from automations will be ignored
